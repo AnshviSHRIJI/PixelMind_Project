@@ -282,8 +282,7 @@
 <body>
     <div class="container">
         <h1>🎨 AI Image Generator</h1>
-        
-        <!-- Image Modal -->
+    
         <div id="imageModal" class="modal">
             <span class="modal-close" onclick="closeModal()">&times;</span>
             <img class="modal-content" id="modalImage">
@@ -342,12 +341,12 @@
 
     <script>
         let currentSeed = 0;
-        let seedMode = 'increment'; // 'increment', 'decrement', 'random', 'fixed'
+        let seedMode = 'increment';
         let fixedSeed = 0;
         let history = [];
         let imageCounter = 1;
 
-        // Seed control buttons
+        
         document.getElementById('fixSeed').addEventListener('click', () => {
             seedMode = 'fixed';
             fixedSeed = currentSeed;
@@ -436,7 +435,6 @@
             document.getElementById('imageModal').classList.remove('active');
         }
 
-        // Close modal on background click
         document.getElementById('imageModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeModal();
@@ -514,7 +512,7 @@
             }
         });
 
-        // Initialize
+     
         updateSeedDisplay();
     </script>
 </body>
